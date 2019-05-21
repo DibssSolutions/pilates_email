@@ -1,0 +1,24 @@
+{% import "../partials/_mixins.html" as mixins %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+  <title>{{ title }}</title>
+  <link rel="stylesheet" media="all" href="css/{{css}}">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body bgcolor="{{bg}}" height="100%">
+<table border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" style="table-layout: fixed; font-family: 'Verdana', 'Segoe UI', 'Roboto', 'Ubuntu', Arial; font-size: 14px; color: #4A484A; margin: 0 auto;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100% ;margin: auto;padding: 0;height: 100% !important;border-radius:13px;
+  ">
+<tr>
+<td align="center" style="background-color: {{bg}};">
+    {% include "partials/_header.html" %}
+  <table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="{{width}}" style="table-layout: fixed; font-family: 'Verdana', 'Segoe UI', 'Roboto', 'Ubuntu', Arial; font-size: 14px; color: #4A484A; margin: 0 auto;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100% ;margin: auto;padding: 0;height: 100% !important;border-radius:13px;
+  ">
+    {% block content %}{% endblock %}
+  </table>
+</td>
+</tr>
+</table>
+</body>
+</html>
